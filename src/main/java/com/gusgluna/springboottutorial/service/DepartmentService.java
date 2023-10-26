@@ -1,6 +1,7 @@
 package com.gusgluna.springboottutorial.service;
 
 import com.gusgluna.springboottutorial.entity.Department;
+import com.gusgluna.springboottutorial.error.DepartmentNotFoundException;
 
 import java.util.List;
 
@@ -10,7 +11,7 @@ public interface DepartmentService {
 
     List<Department> fetchDepartmentList();
 
-    Department fetchDepartmentById(Long departmentId);
+    Department fetchDepartmentById(Long departmentId) throws DepartmentNotFoundException;
 
     String deleteDepartmentById(Long departmentId);
 
